@@ -1,0 +1,15 @@
+<h3>Login Page</h3>
+
+<form method="post" action="/login">
+  <input type="text" name="email" placeholder="Email">
+  <input type="password" name="password" placeholder="Password">
+  <input type="submit" value="Login">
+</form>
+
+<% if @errors %>
+  <% @errors.each do |error| %>
+    <ul>
+      <li><%= error %></li>
+    </ul>
+  <% end %>
+<% end %>
